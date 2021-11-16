@@ -56,15 +56,16 @@ class Character:
 		self.weapon = None
 		self.hp = max_hp
 	
+	# TODO: Getter pour name
 	@property
 	def name(self):
 		return self.__name
 
+	# TODO: Getter/setter pour weapon. Affecter ce qui est passé comme valeur. Si la valeur est None, je lui met une arme vide (le Unarmed)
 	@property
 	def weapon(self):
 		return self.__weapon
 
-	# TODO: Affecter ce qui est passé comme valeur. Si la valeur est None, je lui met une arme vide (le Unarmed)
 	@weapon.setter
 	def weapon(self, val):
 		if val is None:
@@ -73,8 +74,7 @@ class Character:
 			raise ValueError(Weapon)
 		self.__weapon = val
 
-	# TODO: Définir getter/setter pour `hp`, qui doit être borné entre 0 et `max_hp`
-
+	# TODO: Getter/setter pour hp. Borner entre 0 et max_hp
 	@property
 	def hp(self):
 		return self.__hp
@@ -83,6 +83,7 @@ class Character:
 	def hp(self, val):
 		self.__hp = utils.clamp(val, 0, self.max_hp)
 
+	# TODO: compute_damage, qui retourne un tuple (dommage calculé en entier, booléen qui dit si c'est un crit)
 	def compute_damage(self, other):
 		level_factor = (2 * self.level) / 5 + 2
 		weapon_factor = self.weapon.power

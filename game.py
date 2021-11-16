@@ -21,6 +21,10 @@ class Weapon:
 
 	UNARMED_POWER = 20
 
+	# TODO: Getter pour name
+
+	# TODO: make_unarmed
+
 
 class Character:
 	"""
@@ -33,6 +37,13 @@ class Character:
 	:param level: Le niveau d'expérience du personnage
 	"""
 
+	# TODO: Getter pour name
+
+	# TODO: Getter/setter pour weapon. Affecter ce qui est passé comme valeur. Si la valeur est None, je lui met une arme vide (le Unarmed)
+
+	# TODO: Getter/setter pour hp. Borner entre 0 et max_hp
+
+	# TODO: compute_damage, qui retourne un tuple (dommage calculé en entier, booléen qui dit si c'est un crit)
 
 
 def deal_damage(attacker, defender):
